@@ -1,35 +1,73 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import {AppBar, Toolbar, Typography, Button, IconButton} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 
-const Navbar = () => (
-	<Nav position="sticky">
-		<Toolbar>
-			<Menu color="inherit" aria-label="Menu">
-				<MenuIcon />
-			</Menu>
-			<Logo variant="title" color="inherit">
-				EciDev
-			</Logo>
-		</Toolbar>
-	</Nav>
-)
+const Navbar = ({ handleSayHello }) => (
+  <Nav position="sticky">
+    <Toolbar>
+      <LogoContainer>
+        <Logo>
+          <Text>EciDev</Text>
+        </Logo>
+      </LogoContainer>
+      <SayHello onClick={handleSayHello}>Say Hello! :)</SayHello>
+    </Toolbar>
+  </Nav>
+);
 
 export default Navbar;
 
-//styled components
-
 const Nav = styled(AppBar)`
-background-color: ${props => props.theme.secondary} !important;
-flex-grow: 1 !important;
-`
+  &&& {
+    width: 100%;
+    position: absolute;
+    box-shadow: none;
+    color: ${props => props.theme.primaryLight};
+    background-color: rgba(121, 156, 105, 0);
+    display: flex;
+  }
+`;
 
-const Menu = styled(IconButton)`
-margin-left: -12,
-margin-right: 20,
-`
-const Logo = styled(Typography)`
-flex-grow: 1 !important;
-`
+const SayHello = styled.div`
+  color: ${props => props.theme.textPrimary};
+  border-radius: 10rem;
+  border: 1px solid ${props => props.theme.borderPrimary};
+  box-shadow: 1px 1px 5px ${props => props.theme.shadowSecondary};
+  padding: 2%;
+  margin: 2%;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  &:hover {
+    background-color: ${props => props.theme.primary};
+  }
+`;
+
+const LogoContainer = styled.div`
+  margin: 1%;
+  flex-grow: 1;
+`;
+
+const Logo = styled.div`
+  &&& {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    border: 1px solid ${props => props.theme.primary};
+    background: ${props => props.theme.primary};
+    box-shadow: 1px 1px 5px ${props => props.theme.primary};
+  }
+`;
+
+const Text = styled(Typography)`
+  &&& {
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 3px;
+  }
+`;
