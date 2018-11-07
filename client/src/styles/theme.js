@@ -1,11 +1,18 @@
 const theme = {
-	//main usage colors
-	primary: 'rgb(228, 225, 225)',
-	primaryLight: 'rgba(22, 84, 40, 0.71)',
-	secondary: 'rgba(118, 144, 145, 0.7)',
+  //main usage colors
+  primary: "rgb(224, 89, 146)",
+  secondary: "rgb(247, 148, 75)",
+  primaryLight: "rgba(224, 89, 146, 0.85)",
+  secondaryLight: "rgba(247, 148, 75, 0.85)",
 
-	textPrimary: 'rgb(230, 230, 230)',
-	textSecondary: 'rgb(88, 88, 88)',
+  borderPrimary: "white",
+  borderSecondary: "rgba(54, 49, 45, 0.85)",
+
+  textPrimary: "white",
+  textSecondary: "rgb(54, 49, 45)",
+
+  shadowPrimary: "rgb(54, 47, 50)",
+  shadowSecondary: "rgb(199, 168, 181)"
 };
 
 export default theme;
