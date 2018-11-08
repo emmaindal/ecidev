@@ -5,6 +5,7 @@ body{
 }
 
 .App {
+max-width: 100vw;
   text-align: center;
   background: linear-gradient(-30deg, rgb(232, 44, 123), rgb(201, 49, 95), rgb(215, 97, 147), rgb(201, 49, 95));
   background-size: 400% 400%;
