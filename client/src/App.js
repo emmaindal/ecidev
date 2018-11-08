@@ -1,12 +1,12 @@
-import React, { ReactDOM, Component } from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 import * as Scroll from "react-scroll";
-import { Events } from "react-scroll";
 
 import theme from "./styles/theme";
 import styled, { ThemeProvider } from "styled-components";
@@ -26,6 +26,7 @@ class App extends Component {
           <Header />
           <Main />
           <Contact />
+          <Footer />
         </div>
       </ThemeProvider>
     );

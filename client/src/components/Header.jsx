@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import theme from "../styles/theme";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
 class Header extends Component {
@@ -19,9 +18,14 @@ class Header extends Component {
 }
 
 const Container = styled.div`
-  background-color: ${props => props.theme.primaryLight};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0);
   min-height: 100vh;
+  color: white;
 `;
 
 const Effect = styled.div`
@@ -29,16 +33,18 @@ const Effect = styled.div`
   min-height: 100vh;
   position: absolute;
   background-color: ${props => props.theme.secondaryLight};
-  clip-path: polygon(
+  clip-path: circle(500px at 20% 20%);
+
+  /* clip-path: polygon(
     0% 0%,
     100% 0%,
-    100% 75%,
+    280% 75%,
     75% 25%,
-    55% 20%,
+    85% 20%,
     35% 60%,
     20% 60%,
-    -4% 105%
-  );
+    -4% 100%
+  ); */
 `;
 
 const Heading = styled(Typography)`
