@@ -4,23 +4,14 @@ import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
 class Header extends Component {
-  state = {
-    underConstruction: true
-  };
   render() {
     return (
       <Container className="App-header">
         <Effect />
-        {!this.state.underConstruction && (
-          <Heading>Design - Frontend - Backend</Heading>
-        )}
-        {!this.state.underConstruction && (
-          <SubHeading>
-            A creative Informationarchitect with a huge love for Web Development
-          </SubHeading>
-        )}
-
-        <SubHeading>EciDev is under construction. Welcome back!</SubHeading>
+        <Heading>Design - Frontend - Backend</Heading>
+        <SubHeading>
+          A creative Informationarchitect with a huge love for Web Development
+        </SubHeading>
       </Container>
     );
   }
