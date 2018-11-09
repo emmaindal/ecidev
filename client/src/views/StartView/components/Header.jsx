@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <Container className="App-header">
         <Effect />
-        <Heading>Design - FrontEnd - BackEnd</Heading>
+        <Heading>Design - Frontend - Backend</Heading>
         <SubHeading>
           A creative Informationarchitect with a huge love for Web Development
         </SubHeading>

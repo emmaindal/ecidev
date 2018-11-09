@@ -10,7 +10,7 @@ class Contact extends Component {
         <Content>
           <Heading>I love coffee. Do you?</Heading>
           <Text>
-            Do you have on a fantastic idea or just want to swap some words over
+            Do you sit on a fantastic idea or just want to swap some words over
             a coffee. Do not hesitate to get in touch with me.
           </Text>
           <FormContainer>
