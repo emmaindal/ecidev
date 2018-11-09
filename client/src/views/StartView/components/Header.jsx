@@ -34,6 +34,7 @@ const Effect = styled.div`
   position: absolute;
   background-color: ${props => props.theme.secondaryLight};
   clip-path: circle(500px at 20% 20%);
+  -webkit-clip-path: circle(500px at 20% 20%);
 
   /* clip-path: polygon(
     0% 0%,
