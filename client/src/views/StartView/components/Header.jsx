@@ -54,6 +54,10 @@ const Heading = styled(Typography)`
     letter-spacing: 5px;
     font-weight: 200;
     color: white;
+
+    @media (max-width: 700px) {
+      font-size: 1.1rem;
+    }
   }
 `;
 
@@ -62,6 +66,9 @@ const SubHeading = styled(Typography)`
     z-index: 9999;
     letter-spacing: 4px;
     font-size: 1rem;
+    @media (max-width: 700px) {
+      font-size: 0.7rem;
+    }
   }
 `;
 

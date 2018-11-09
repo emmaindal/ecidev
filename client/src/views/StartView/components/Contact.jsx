@@ -42,7 +42,7 @@ class Contact extends Component {
 }
 
 const FormContainer = styled.fieldset`
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   border: none;
   @media (max-width: 700px) {
@@ -122,12 +122,15 @@ const ContactForm = styled.form`
 
 const Content = styled.div`
   margin-top: 20%;
-  width: 80%;
+  width: 60%;
   height: 60%;
   border-radius: 2px;
   border: 1px solid ${props => props.theme.primaryLight};
+  margin-bottom: 5%;
+
   @media (max-width: 700px) {
     width: 90%;
+    margin-bottom: 20%;
   }
 `;
 

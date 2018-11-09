@@ -25,13 +25,16 @@ const CardContainer = styled.div`
   letter-spacing: 2px;
   font-weight: bold;
   border-radius: 20px;
-  margin: 1%;
+  margin: 2%;
   padding: 3%;
   width: 300px;
   min-height: 400px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0px 0px 20px 2px rgba(73, 70, 72, 0.39);
   color: ${props => props.theme.primary};
+  @media (max-width: 700px) {
+    margin-bottom: 8%;
+  }
 `;
 
 const CardTitle = styled.section`
