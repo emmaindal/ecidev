@@ -33,6 +33,7 @@ const CardContainer = styled.div`
   box-shadow: 0px 0px 20px 2px rgba(73, 70, 72, 0.39);
   color: ${props => props.theme.primary};
   @media (max-width: 700px) {
+    margin: 0;
     margin-bottom: 8%;
   }
 `;

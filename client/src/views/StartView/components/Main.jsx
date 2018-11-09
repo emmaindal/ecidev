@@ -54,7 +54,10 @@ const Cards = styled.div`
   height: 90%;
 
   @media (max-width: 700px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30%;
+    height: 80%;
   }
 `;
 
