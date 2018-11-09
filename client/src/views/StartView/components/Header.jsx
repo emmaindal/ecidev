@@ -33,8 +33,8 @@ const Effect = styled.div`
   min-height: 100vh;
   position: absolute;
   background-color: ${props => props.theme.secondaryLight};
-  clip-path: circle(500px at 20% 20%);
-  -webkit-clip-path: circle(500px at 20% 20%);
+  clip-path: circle(50% at 20% 20%);
+  -webkit-clip-path: circle(50% at 30% 20%);
 
   /* clip-path: polygon(
     0% 0%,
