@@ -4,35 +4,79 @@ import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 
 class Contact extends Component {
+  state = {
+    name: "",
+    email: "",
+    message: ""
+  };
+
+  handleInputChange = e => {
+    const inputField = e.currentTarget.name;
+    const value = e.currentTarget.value;
+    this.setState({
+      [inputField]: value
+    });
+  };
+
+  handleSendForm = e => {
+    e.preventDefault();
+    this.setState({
+      name: "",
+      email: "",
+      message: ""
+    });
+  };
+
   render() {
     return (
       <Container>
         <Content>
           <Heading>I love coffee. Do you?</Heading>
           <Text>
-            Do you sit on a fantastic idea or just want to swap some words over
-            a coffee. Do not hesitate to get in touch with me.
+            Do you have a fantastic idea or just want to swap some words over a
+            coffee. Do not hesitate to get in touch with me.
           </Text>
           <FormContainer>
-            <ContactForm action="#">
+            <ContactForm action="#" onSubmit={this.handleSendForm}>
               <Columns>
                 <Column half>
                   <Label special htmlFor="name">
                     NAME
                   </Label>
-                  <Input type="text" name="name" label="name" />
+                  <Input
+                    onChange={this.handleInputChange}
+                    type="text"
+                    name="name"
+                    value={this.state.name}
+                    label="name"
+                    required
+                  />
                 </Column>
                 <Column half>
                   <Label special htmlFor="email">
                     EMAIL
                   </Label>
-                  <Input type="text" name="email" label="email" />
+                  <Input
+                    onChange={this.handleInputChange}
+                    type="text"
+                    name="email"
+                    value={this.state.email}
+                    label="email"
+                    required
+                  />
                 </Column>
               </Columns>
               <Column>
                 <Label htmlFor="message">MESSAGE</Label>
-                <Message type="textarea" name="message" />
+                <Message
+                  onChange={this.handleInputChange}
+                  type="textarea"
+                  value={this.state.message}
+                  name="message"
+                  required
+                />
               </Column>
+              <Button type="submit">Send</Button>
             </ContactForm>
           </FormContainer>
         </Content>
@@ -41,6 +85,21 @@ class Contact extends Component {
   }
 }
 
+const Button = styled.button`
+  margin: 3%;
+  padding: 3%;
+  float: right;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  background: white;
+  color: ${props => props.theme.primary};
+
+  :hover {
+    background: ${props => props.theme.primary};
+    color: white;
+  }
+`;
 const FormContainer = styled.fieldset`
   width: 100%;
   margin: 0 auto;
@@ -55,7 +114,7 @@ const Columns = styled.div`
   justify-content: center;
   margin-left: -0.75rem;
   margin-right: -0.75rem;
-  margin-top: -0.75rem;
+  margin-bottom: 5%;
 `;
 
 const Column = styled.div`
@@ -121,10 +180,10 @@ const ContactForm = styled.form`
 `;
 
 const Content = styled.div`
-  margin-top: 20%;
-  width: 60%;
-  height: 60%;
-  border-radius: 2px;
+  margin-top: 17%;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 2px rgba(36, 36, 36, 0.14);
   border: 1px solid ${props => props.theme.primaryLight};
   margin-bottom: 5%;
 

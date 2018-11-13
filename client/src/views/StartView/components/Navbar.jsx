@@ -61,6 +61,12 @@ const Logo = styled.div`
     border: 1px solid ${props => props.theme.primary};
     background: ${props => props.theme.primary};
     box-shadow: 1px 1px 5px ${props => props.theme.primary};
+
+    @media (max-width: 700px) {
+      height: 1rem;
+      width: 1rem;
+      margin-top: 1rem;
+    }
   }
 `;
 
@@ -69,5 +75,9 @@ const Text = styled(Typography)`
     font-size: 1.2rem;
     color: white;
     letter-spacing: 3px;
+
+    @media (max-width: 700px) {
+      font-size: 1rem;
+    }
   }
 `;

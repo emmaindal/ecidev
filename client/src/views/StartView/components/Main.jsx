@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Typography } from "@material-ui/core";
 import Card from "./Card";
 
-import CardContent from "./CardContent";
+import CardContent from "../content/CardContent";
 
 class Main extends Component {
   render() {

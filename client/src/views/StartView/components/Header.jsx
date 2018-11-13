@@ -24,6 +24,7 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
+  filter: drop-shadow(5px 5px 10px rgba(52, 52, 52, 0.3));
   min-height: 100vh;
   color: white;
 `;
@@ -33,7 +34,7 @@ const Effect = styled.div`
   min-height: 100vh;
   position: absolute;
   background-color: ${props => props.theme.secondaryLight};
-  clip-path: circle(50% at 20% 20%);
+  clip-path: circle(50% at 30% 20%);
   -webkit-clip-path: circle(50% at 30% 20%);
 
   /* clip-path: polygon(
@@ -57,7 +58,7 @@ const Heading = styled(Typography)`
     color: white;
 
     @media (max-width: 700px) {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
     }
   }
 `;

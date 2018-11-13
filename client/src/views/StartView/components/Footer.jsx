@@ -10,6 +10,7 @@ const Container = styled.div`
   padding: 2%;
   color: ${props => props.theme.textSecondary};
   font-weight: bold;
+  border-top: 1px solid rgba(47, 47, 47, 0.22);
   background: rgba(255, 255, 255, 0.82);
 `;
 
