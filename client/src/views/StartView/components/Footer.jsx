@@ -9,9 +9,9 @@ const Container = styled.div`
   margin: -0;
   padding: 2%;
   color: ${props => props.theme.textSecondary};
-  font-weight: bold;
-  border-top: 1px solid rgba(47, 47, 47, 0.22);
-  background: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 200;
+  background: transparent;
 `;
 
 export default Footer;

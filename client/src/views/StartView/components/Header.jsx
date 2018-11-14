@@ -23,17 +23,16 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
   filter: drop-shadow(5px 5px 10px rgba(52, 52, 52, 0.3));
   min-height: 100vh;
-  color: white;
+  color: ${props => props.theme.textPrimary};
 `;
 
 const Effect = styled.div`
   width: 100%;
   min-height: 100vh;
   position: absolute;
-  background-color: ${props => props.theme.secondaryLight};
+  background-color: ${props => props.theme.secondary};
   clip-path: circle(50% at 30% 20%);
   -webkit-clip-path: circle(50% at 30% 20%);
 
@@ -54,8 +53,8 @@ const Heading = styled(Typography)`
     z-index: 9999;
     font-size: 4rem;
     letter-spacing: 5px;
-    font-weight: 200;
-    color: white;
+    font-weight: 500;
+    color: ${props => props.theme.textSecondary};
 
     @media (max-width: 700px) {
       font-size: 1.5rem;
@@ -66,7 +65,8 @@ const Heading = styled(Typography)`
 const SubHeading = styled(Typography)`
   &&& {
     z-index: 9999;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+    font-weight: 500;
     font-size: 1rem;
     @media (max-width: 700px) {
       font-size: 0.7rem;

@@ -64,7 +64,7 @@ const Cards = styled.div`
 const Heading = styled(Typography)`
   &&& {
     margin-bottom: 5%;
-    color: white;
+    color: ${props => props.theme.textSecondary};
     letter-spacing: 4px;
     font-size: 2rem;
   }
@@ -73,6 +73,7 @@ const Heading = styled(Typography)`
 const About = styled.p`
   font-size: 1.2rem;
   letter-spacing: 1px;
+  font-weight: bold;
   margin-bottom: 5%;
 `;
 
@@ -87,8 +88,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   height: 20%;
-  margin-top: 5%;
-  background-color: rgba(255, 255, 255, 0);
 `;
 
 export default Main;

@@ -29,10 +29,10 @@ const CardContainer = styled.div`
   margin: 2%;
   padding: 3%;
   min-width: 28%;
-  height: 400px;
+  height: 420px;
   background: ${props => props.theme.secondary};
   box-shadow: 0px 0px 20px 10px rgba(34, 25, 10, 0.12);
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.textPrimary};
   @media (max-width: 700px) {
     margin: 0;
     margin-bottom: 8%;
@@ -42,19 +42,19 @@ const CardContainer = styled.div`
 const CardTitle = styled.section`
   font-size: 25px;
   padding-bottom: 5%;
-  color: white;
+  color: ${props => props.theme.textSecondary};
 `;
 
 const CardContent = styled.section`
-  font-weight: 300;
+  font-weight: bold;
   color: ${props => props.theme.textPrimary};
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding-bottom: 5%;
 `;
 
 const Heading3 = styled.h3`
   padding-top: 10%;
-  color: rgb(0, 0, 0);
+  color: ${props => props.theme.textSecondary};
   font-weight: bold;
 `;
 
@@ -66,7 +66,7 @@ const List = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  color: white;
+  color: ${props => props.theme.textPrimary};
 `;
 
 const ListItem = styled.li`

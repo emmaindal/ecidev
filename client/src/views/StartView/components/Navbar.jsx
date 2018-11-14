@@ -24,13 +24,13 @@ const Nav = styled(AppBar)`
     position: absolute;
     box-shadow: none;
     color: ${props => props.theme.primaryLight};
-    background-color: rgba(121, 156, 105, 0);
+    background: transparent;
     display: flex;
   }
 `;
 
 const SayHello = styled.div`
-  color: ${props => props.theme.textPrimary};
+  color: ${props => props.theme.textSecondary};
   border-radius: 10rem;
   border: 1px solid ${props => props.theme.borderPrimary};
   box-shadow: 1px 1px 5px ${props => props.theme.shadowSecondary};

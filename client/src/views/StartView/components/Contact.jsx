@@ -92,12 +92,13 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   font-size: 12px;
+  font-weight: bold;
   background: white;
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.textPrimary};
 
   :hover {
     background: ${props => props.theme.primary};
-    color: white;
+    color: ${props => props.theme.textPrimary};
   }
 `;
 const FormContainer = styled.fieldset`
@@ -126,7 +127,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   height: 90%;
-  background-color: rgba(255, 255, 255, 0.82);
+  background: transparent;
 `;
 
 const Input = styled.input`
@@ -150,6 +151,8 @@ const Message = styled.textarea`
 
 const Label = styled.label`
   float: left;
+  font-weight: bold;
+  color: ${props => props.theme.textPrimary};
   margin-left: ${props => (props.special ? "10%" : "3%")};
   font-size: 1rem;
   letter-spacing: 2px;
@@ -158,7 +161,7 @@ const Label = styled.label`
 const Heading = styled(Typography)`
   &&& {
     margin-top: 5%;
-    color: ${props => props.theme.primaryLight};
+    color: ${props => props.theme.textPrimary};
     letter-spacing: 4px;
     font-size: 2rem;
   }
@@ -166,7 +169,8 @@ const Heading = styled(Typography)`
 
 const Text = styled.p`
   margin: 2% 10% 0 10%;
-  color: ${props => props.theme.primaryLight};
+  font-weight: bold;
+  color: ${props => props.theme.textPrimary};
 `;
 const ContactForm = styled.form`
   width: 60%;
@@ -186,6 +190,8 @@ const Content = styled.div`
   box-shadow: 0px 0px 10px 2px rgba(36, 36, 36, 0.14);
   border: 1px solid ${props => props.theme.primaryLight};
   margin-bottom: 5%;
+  background: ${props => props.theme.secondary};
+  color: white;
 
   @media (max-width: 700px) {
     width: 90%;
