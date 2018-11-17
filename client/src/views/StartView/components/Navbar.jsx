@@ -20,27 +20,34 @@ export default Navbar;
 
 const Nav = styled(AppBar)`
   &&& {
+    font-size: 1vw;
     width: 100%;
     position: absolute;
     box-shadow: none;
     color: ${props => props.theme.primaryLight};
     background: transparent;
     display: flex;
+    @media (max-width: 700px) {
+      font-size: 3vw;
+    }
   }
 `;
 
 const SayHello = styled.div`
+  background-color: ${props => props.theme.primary};
   color: ${props => props.theme.textSecondary};
+  border: 1px solid white;
   border-radius: 10rem;
-  border: 1px solid ${props => props.theme.borderPrimary};
-  box-shadow: 1px 1px 5px ${props => props.theme.shadowSecondary};
+  box-shadow: 0px 0px 4px ${props => props.theme.primary};
   padding: 2%;
   margin: 2%;
   font-weight: 700;
   letter-spacing: 3px;
+  cursor: pointer;
 
   &:hover {
-    background-color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.secondary};
+    color: ${props => props.theme.textPrimary};
   }
 `;
 
@@ -72,12 +79,10 @@ const Logo = styled.div`
 
 const Text = styled(Typography)`
   &&& {
-    font-size: 1.2rem;
     color: white;
     letter-spacing: 3px;
 
     @media (max-width: 700px) {
-      font-size: 1rem;
     }
   }
 `;

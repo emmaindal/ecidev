@@ -1,10 +1,10 @@
 const theme = {
-  primary: "#3C7EF9",
-  secondary: "#F7B89D",
-  primaryLight: "#6698F4",
-  secondaryLight: "#F7C2AD",
-  primaryDark: "#255EC6",
-  secondaryDark: "#F6976F",
+  primary: "#6542AB",
+  secondary: "#EDECFA",
+  primaryLight: "#8B63DA",
+  secondaryLight: "#BCBBCF",
+  primaryDark: "#3D1F79",
+  secondaryDark: "#9492A4",
 
   borderPrimary: "white",
   borderSecondary: "rgba(54, 49, 45, 0.85)",

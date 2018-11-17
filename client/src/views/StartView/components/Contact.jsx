@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import styled from "styled-components";
-import { Typography } from "@material-ui/core";
 
 class Contact extends Component {
   state = {
@@ -37,7 +35,12 @@ class Contact extends Component {
             coffee. Do not hesitate to get in touch with me.
           </Text>
           <FormContainer>
-            <ContactForm action="#" onSubmit={this.handleSendForm}>
+            <ContactForm
+              name="contact"
+              method="POST"
+              netlify
+              onSubmit={this.handleSendForm}
+            >
               <Columns>
                 <Column half>
                   <Label special htmlFor="name">
@@ -45,7 +48,7 @@ class Contact extends Component {
                   </Label>
                   <Input
                     onChange={this.handleInputChange}
-                    type="text"
+                    type="name"
                     name="name"
                     value={this.state.name}
                     label="name"
@@ -58,7 +61,7 @@ class Contact extends Component {
                   </Label>
                   <Input
                     onChange={this.handleInputChange}
-                    type="text"
+                    type="email"
                     name="email"
                     value={this.state.email}
                     label="email"
@@ -85,101 +88,97 @@ class Contact extends Component {
   }
 }
 
-const Button = styled.button`
-  margin: 3%;
-  padding: 3%;
-  float: right;
-  border: none;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: bold;
-  background: white;
-  color: ${props => props.theme.textPrimary};
-
-  :hover {
-    background: ${props => props.theme.primary};
-    color: ${props => props.theme.textPrimary};
+const Container = styled.div`
+  margin-top: 15%;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  height: 90%;
+  background: transparent;
+  @media (max-width: 700px) {
+    font-size: 7vw;
   }
 `;
+
+const Heading = styled.h2`
+  margin-top: 5%;
+  color: ${props => props.theme.textPrimary};
+  letter-spacing: 4px;
+`;
+
+const Text = styled.p`
+  font-size: 60%;
+  margin: 4% 10% 0 10%;
+  font-weight: bold;
+  color: ${props => props.theme.textPrimary};
+`;
+
 const FormContainer = styled.fieldset`
-  width: 100%;
-  margin: 0 auto;
+  margin: 2%;
+  padding: 0;
   border: none;
-  @media (max-width: 700px) {
-    width: 95%;
-  }
 `;
 
 const Columns = styled.div`
   display: flex;
   justify-content: center;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-  margin-bottom: 5%;
+  @media (max-width: 700px) {
+    width: 95%;
+    flex-direction: column;
+  }
 `;
 
 const Column = styled.div`
-  flex: none;
   width: ${props => (props.half ? "50%" : "default")};
-`;
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 90%;
-  background: transparent;
+  @media (max-width: 700px) {
+    width: 95%;
+    width: ${props => (props.half ? "100%" : "100%")};
+  }
 `;
 
 const Input = styled.input`
+  box-shadow: 0px 0px 10px 2px rgba(36, 36, 36, 0.14);
   border: none;
+  padding: 2%
   height: 30px;
   width: 80%;
   border-radius: 5px;
   @media (max-width: 700px) {
-    width: 95%;
+    width: 100%;
   }
 `;
 
 const Message = styled.textarea`
+  box-shadow: 0px 0px 10px 2px rgba(36, 36, 36, 0.14);
   padding: 2%;
   border-radius: 5px;
-  width: 90%;
+  width: 95%;
   height: 200px;
   resize: none;
   border: 0;
 `;
 
 const Label = styled.label`
+  font-size: 50%;
+
+  margin: 5% 0 2% 0;
+
   float: left;
   font-weight: bold;
   color: ${props => props.theme.textPrimary};
   margin-left: ${props => (props.special ? "10%" : "3%")};
-  font-size: 1rem;
   letter-spacing: 2px;
-`;
 
-const Heading = styled(Typography)`
-  &&& {
-    margin-top: 5%;
-    color: ${props => props.theme.textPrimary};
-    letter-spacing: 4px;
-    font-size: 2rem;
+  @media (max-width: 700px) {
+    margin-left: 0%;
   }
 `;
 
-const Text = styled.p`
-  margin: 2% 10% 0 10%;
-  font-weight: bold;
-  color: ${props => props.theme.textPrimary};
-`;
 const ContactForm = styled.form`
-  width: 60%;
-  margin: 60px auto 0;
-  display: block;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+  width: 70%;
+  margin: 40px auto 0;
   @media (max-width: 700px) {
-    width: 95%;
+    width: 99%;
   }
 `;
 
@@ -187,16 +186,33 @@ const Content = styled.div`
   margin-top: 17%;
   width: 50%;
   border-radius: 5px;
+  border-bottom: 15px solid ${props => props.theme.primaryDark};
   box-shadow: 0px 0px 10px 2px rgba(36, 36, 36, 0.14);
-  border: 1px solid ${props => props.theme.primaryLight};
   margin-bottom: 5%;
   background: ${props => props.theme.secondary};
   color: white;
 
   @media (max-width: 700px) {
-    width: 90%;
+    width: 95%;
     margin-bottom: 20%;
   }
 `;
 
+const Button = styled.button`
+  margin: 3% 0 3% 0;
+  padding: 3%;
+  float: right;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  min-width: 200px;
+  background: white;
+  box-shadow: 0px 0px 10px 2px rgba(36, 36, 36, 0.14);
+  color: ${props => props.theme.textPrimary};
+
+  :hover {
+    background: ${props => props.theme.primary};
+    color: ${props => props.theme.textSecondary};
+  }
+`;
 export default Contact;

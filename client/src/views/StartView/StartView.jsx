@@ -8,13 +8,13 @@ import Footer from "./components/Footer";
 
 const StartView = ({ handleSayHello }) => {
   return (
-    <div>
+    <>
       <Navbar handleSayHello={handleSayHello} />
       <Header />
       <Main />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 };
 

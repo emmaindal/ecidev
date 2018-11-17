@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
-import { Typography } from "@material-ui/core";
 import Card from "./Card";
 
 import CardContent from "../content/CardContent";
@@ -45,6 +44,17 @@ class Main extends Component {
     );
   }
 }
+
+const Container = styled.div`
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  @media (max-width: 700px) {
+    font-size: 4vw;
+  }
+`;
+
 const Cards = styled.div`
   display: flex;
   justify-content: center;
@@ -61,20 +71,20 @@ const Cards = styled.div`
   }
 `;
 
-const Heading = styled(Typography)`
+const Heading = styled.h2`
   &&& {
     margin-bottom: 5%;
     color: ${props => props.theme.textSecondary};
     letter-spacing: 4px;
-    font-size: 2rem;
   }
 `;
 
 const About = styled.p`
-  font-size: 1.2rem;
-  letter-spacing: 1px;
   font-weight: bold;
-  margin-bottom: 5%;
+  @media (max-width: 700px) {
+    font-size: 4.5vw;
+    margin-bottom: 10%;
+  }
 `;
 
 const Content = styled.div`
@@ -82,12 +92,6 @@ const Content = styled.div`
   @media (max-width: 700px) {
     max-width: 90%;
   }
-`;
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 20%;
 `;
 
 export default Main;

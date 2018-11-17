@@ -4,8 +4,19 @@ import "./App.css";
 import StartViewContainer from "./StartView/StartViewContainer";
 
 import theme from "../styles/theme";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, injectGlobal } from "styled-components";
 
+injectGlobal`
+  @font-face {
+    font-family: "Lato", "sans-serif";
+  }
+
+  body {
+    margin: 0;
+	padding:0;
+	
+	}
+`;
 class App extends Component {
   render() {
     return (

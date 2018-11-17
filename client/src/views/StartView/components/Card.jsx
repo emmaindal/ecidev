@@ -10,7 +10,7 @@ const Card = ({ title, content, heading3, listitems }) => {
         <Heading3>{heading3}</Heading3>
         <List>
           {listitems.map(item => (
-            <ListItem>{item}</ListItem>
+            <ListItem key={item}>{item}</ListItem>
           ))}
         </List>
       </CardContent>
@@ -21,40 +21,39 @@ const Card = ({ title, content, heading3, listitems }) => {
 export default Card;
 
 const CardContainer = styled.div`
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 1vw;
   font-weight: bold;
   border-radius: 5px;
-  border-bottom: 15px solid ${props => props.theme.primary};
+  border-bottom: 15px solid ${props => props.theme.primaryDark};
   margin: 2%;
   padding: 3%;
   min-width: 28%;
-  height: 420px;
+  height: 60%;
   background: ${props => props.theme.secondary};
   box-shadow: 0px 0px 20px 10px rgba(34, 25, 10, 0.12);
   color: ${props => props.theme.textPrimary};
+
   @media (max-width: 700px) {
+    font-size: 4.5vw;
     margin: 0;
     margin-bottom: 8%;
   }
 `;
 
-const CardTitle = styled.section`
-  font-size: 25px;
+const CardTitle = styled.h1`
   padding-bottom: 5%;
-  color: ${props => props.theme.textSecondary};
+  color: ${props => props.theme.primaryDark};
 `;
 
-const CardContent = styled.section`
+const CardContent = styled.div`
   font-weight: bold;
   color: ${props => props.theme.textPrimary};
-  font-size: 0.9rem;
   padding-bottom: 5%;
 `;
 
 const Heading3 = styled.h3`
   padding-top: 10%;
-  color: ${props => props.theme.textSecondary};
+  color: ${props => props.theme.primaryDark};
   font-weight: bold;
 `;
 

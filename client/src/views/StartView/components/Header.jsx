@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "../../App.css";
 import styled from "styled-components";
-import { Typography } from "@material-ui/core";
 
 class Header extends Component {
   render() {
     return (
       <Container className="App-header">
-        <Effect />
+        <Effect>
+          <img src="./svg-website.svg" alt="svg pic" />
+        </Effect>
+
         <Heading>Design - Frontend - Backend</Heading>
         <SubHeading>
           A creative Informationarchitect with a huge love for Web Development
@@ -18,6 +20,7 @@ class Header extends Component {
 }
 
 const Container = styled.div`
+  font-size: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,50 +29,44 @@ const Container = styled.div`
   filter: drop-shadow(5px 5px 10px rgba(52, 52, 52, 0.3));
   min-height: 100vh;
   color: ${props => props.theme.textPrimary};
+  @media (max-width: 700px) {
+    font-size: 4vw;
+  }
 `;
 
 const Effect = styled.div`
   width: 100%;
   min-height: 100vh;
+  top: 0;
+  left: 0;
   position: absolute;
-  background-color: ${props => props.theme.secondary};
-  clip-path: circle(50% at 30% 20%);
-  -webkit-clip-path: circle(50% at 30% 20%);
-
-  /* clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    280% 75%,
-    75% 25%,
-    85% 20%,
-    35% 60%,
-    20% 60%,
-    -4% 100%
-  ); */
 `;
 
-const Heading = styled(Typography)`
+const Heading = styled.h1`
   &&& {
+    margin: 0;
     z-index: 9999;
-    font-size: 4rem;
     letter-spacing: 5px;
-    font-weight: 500;
-    color: ${props => props.theme.textSecondary};
+    font-weight: bold;
+    text-transform: uppercase;
+    color: ${props => props.theme.textPrimary};
 
     @media (max-width: 700px) {
-      font-size: 1.5rem;
+      color: ${props => props.theme.textSecondary};
+      font-size: 5vw;
     }
   }
 `;
 
-const SubHeading = styled(Typography)`
+const SubHeading = styled.h5`
   &&& {
+    margin: 0;
     z-index: 9999;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: 500;
-    font-size: 1rem;
     @media (max-width: 700px) {
-      font-size: 0.7rem;
+      font-size: 4vw;
+      color: ${props => props.theme.secondaryLight};
     }
   }
 `;
