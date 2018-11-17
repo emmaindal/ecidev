@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import event from "../../lib/react-ga-event";
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 class Contact extends Component {
   state = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    isSent: false
   };
 
   handleInputChange = e => {
@@ -17,11 +24,20 @@ class Contact extends Component {
   };
 
   handleSendForm = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(console.log("sent"))
+      .catch(error => alert(error));
+
     e.preventDefault();
     this.setState({
       name: "",
       email: "",
-      message: ""
+      message: "",
+      isSent: true
     });
 
     event("Form", "Message sent");
@@ -39,14 +55,15 @@ class Contact extends Component {
           <FormContainer>
             <ContactForm
               name="contact"
-              method="POST"
-              netlify
+              method="post"
               onSubmit={this.handleSendForm}
             >
+              <Input type="hidden" name="form-name" value="contact" />
+
               <Columns>
                 <Column half>
                   <Label special htmlFor="name">
-                    NAME
+                    NAME*
                   </Label>
                   <Input
                     onChange={this.handleInputChange}
@@ -59,7 +76,7 @@ class Contact extends Component {
                 </Column>
                 <Column half>
                   <Label special htmlFor="email">
-                    EMAIL
+                    EMAIL*
                   </Label>
                   <Input
                     onChange={this.handleInputChange}
@@ -81,7 +98,13 @@ class Contact extends Component {
                   required
                 />
               </Column>
-              <Button type="submit">Send</Button>
+              {this.state.isSent ? (
+                <Feedback>
+                  Thank's for your message, I'll respond in 48h
+                </Feedback>
+              ) : (
+                <Button type="submit">Send</Button>
+              )}
             </ContactForm>
           </FormContainer>
         </Content>
@@ -89,6 +112,12 @@ class Contact extends Component {
     );
   }
 }
+
+const Feedback = styled.p`
+  font-size: 14px;
+  font-weight: 800;
+  color: rgb(175, 59, 59);
+`;
 
 const Container = styled.div`
   margin-top: 15%;
@@ -201,6 +230,7 @@ const Content = styled.div`
 `;
 
 const Button = styled.button`
+  cursor: pointer;
   margin: 3% 0 3% 0;
   padding: 3%;
   float: right;
