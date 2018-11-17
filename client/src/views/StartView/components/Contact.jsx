@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
+import event from "../../lib/react-ga-event";
 class Contact extends Component {
   state = {
     name: "",
@@ -23,6 +23,8 @@ class Contact extends Component {
       email: "",
       message: ""
     });
+
+    event("Form", "Message sent");
   };
 
   render() {
