@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Spring } from "react-spring";
+
 import event from "../../lib/react-ga-event";
 
 const encode = data => {
@@ -52,6 +54,21 @@ class Contact extends Component {
             Do you have a fantastic idea or just want to swap some words over a
             coffee. Do not hesitate to get in touch with me.
           </Text>
+          <Spring from={{ height: 50 }} to={{ heigt: 80 }}>
+            {props => (
+              <Link href="https://se.linkedin.com/in/emma-indal">
+                <Image
+                  props={props}
+                  src="./In-Black-128px-TM.png"
+                  alt="linkedin icon"
+                />
+              </Link>
+            )}
+          </Spring>
+
+          <Link href="https://github.com/emmaindal">
+            <Image src="./GitHub-Mark-120px-plus.png" alt="github icon" />
+          </Link>
           <FormContainer>
             <ContactForm
               name="contact"
@@ -113,6 +130,19 @@ class Contact extends Component {
   }
 }
 
+const Link = styled.a`
+  font-size: 14px;
+  margin-right: 2%;
+  font-weight: 800;
+  color: ${props => props.theme.primaryDark};
+`;
+
+const Image = styled.img`
+  cursor: pointer;
+  height: 50px;
+  opacity: 0.8;
+`;
+
 const Feedback = styled.p`
   font-size: 14px;
   font-weight: 800;
@@ -139,7 +169,7 @@ const Heading = styled.h2`
 
 const Text = styled.p`
   font-size: 60%;
-  margin: 4% 10% 0 10%;
+  margin: 4% 10% 5% 10%;
   font-weight: bold;
   color: ${props => props.theme.textPrimary};
 `;
@@ -207,7 +237,7 @@ const Label = styled.label`
 
 const ContactForm = styled.form`
   width: 70%;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   @media (max-width: 700px) {
     width: 99%;
   }

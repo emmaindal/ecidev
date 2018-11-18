@@ -13,10 +13,10 @@ class Main extends Component {
         <Content>
           <Heading>Hi, I'm Emma. Happy to meet you here.</Heading>
           <About>
-            I'm an Informationarchitect student at Malmö University at the
-            moment and doing my third and last year. My heart sings when I get
-            the opportunity to be in the whole working process in a project and
-            I love everything from writing backend code, frontend code to
+            I'm an Information Architect student at Malmö University at the
+            moment and is about to finish my last year. My heart sings when I
+            get the opportunity to be in the whole working process in a project
+            and I love everything from writing backend code, frontend code to
             designing mockups. But I prefer wrinting clean code in JavaScript!
           </About>
           <Cards>

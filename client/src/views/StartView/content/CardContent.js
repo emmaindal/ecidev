@@ -10,13 +10,13 @@ const CardContent = {
     content: `I always strive to write clean, reusable and maintainable code and prefer working with Web.`,
     heading3: "Languages/Libraries I use",
     listitems: [
-      "HTML",
-      "CSS",
       "JavaScript",
       "ReactJS",
       "Redux",
       "Sass",
-      "Styled Components"
+      "Styled Components",
+      "HTML",
+      "CSS"
     ]
   },
   third: {

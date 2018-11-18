@@ -14,6 +14,9 @@ const Card = ({ title, content, heading3, listitems }) => {
           ))}
         </List>
       </CardContent>
+      <CardFooter>
+        <Button> My Work </Button>
+      </CardFooter>
     </CardContainer>
   );
 };
@@ -28,7 +31,7 @@ const CardContainer = styled.div`
   margin: 2%;
   padding: 3%;
   min-width: 28%;
-  height: 60%;
+  max-height: 60%;
   background: ${props => props.theme.secondary};
   box-shadow: 0px 0px 20px 10px rgba(34, 25, 10, 0.12);
   color: ${props => props.theme.textPrimary};
@@ -46,9 +49,26 @@ const CardTitle = styled.h1`
 `;
 
 const CardContent = styled.div`
+  height: 70%;
   font-weight: bold;
   color: ${props => props.theme.textPrimary};
   padding-bottom: 5%;
+`;
+
+const CardFooter = styled.div`
+  height: 20%;
+  margin-top: 10%;
+`;
+
+const Button = styled.button`
+  cursor: pointer;
+  padding: 5%;
+  width: 100px;
+  border: none;
+  background: ${props => props.theme.primary};
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 5px rgba(84, 84, 84, 0.12);
+  color: ${props => props.theme.textSecondary};
 `;
 
 const Heading3 = styled.h3`
