@@ -53,6 +53,10 @@ const Nav = styled(AppBar)`
 `
 const ButtonContainer = styled.div`
   display: flex;
+  @media (max-width: 700px) {
+    margin-top: 10%;
+    flex-direction: column;
+  }
 `
 const Button = styled.div`
   display: flex;

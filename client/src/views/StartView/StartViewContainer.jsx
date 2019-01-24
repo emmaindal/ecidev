@@ -8,7 +8,8 @@ let scroll = Scroll.animateScroll
 
 class StartViewContainer extends React.Component {
   state = {
-    myWorkisVisible: false
+    myWorkisVisible: false,
+    isMobile: false
   }
 
   handleSayHello = () => {
@@ -28,8 +29,7 @@ class StartViewContainer extends React.Component {
   }
 
   render() {
-    const { myWorkisVisible } = this.state
-    const isMobile = window.innerWidth <= 500
+    const { myWorkisVisible, isMobile } = this.state
     return (
       <StartView
         isMobile={isMobile}
