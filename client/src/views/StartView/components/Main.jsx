@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import styled from "styled-components";
-import Card from "./Card";
+import styled from 'styled-components'
+import Card from './Card'
 
-import CardContent from "../content/CardContent";
+import CardContent from '../content/CardContent'
 
 class Main extends Component {
   render() {
-    const { first, second, third } = CardContent;
+    const { first, second, third } = CardContent
     return (
       <Container>
         <Content>
@@ -41,7 +41,7 @@ class Main extends Component {
           </Cards>
         </Content>
       </Container>
-    );
+    )
   }
 }
 
@@ -53,7 +53,7 @@ const Container = styled.div`
   @media (max-width: 700px) {
     font-size: 4vw;
   }
-`;
+`
 
 const Cards = styled.div`
   display: flex;
@@ -69,7 +69,7 @@ const Cards = styled.div`
     margin-bottom: 30%;
     height: 80%;
   }
-`;
+`
 
 const Heading = styled.h2`
   &&& {
@@ -77,21 +77,23 @@ const Heading = styled.h2`
     color: ${props => props.theme.textSecondary};
     letter-spacing: 4px;
   }
-`;
+`
 
 const About = styled.p`
+  font-size: 1.5vw;
+
   font-weight: bold;
   @media (max-width: 700px) {
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin-bottom: 10%;
   }
-`;
+`
 
 const Content = styled.div`
   max-width: 70%;
   @media (max-width: 700px) {
     max-width: 90%;
   }
-`;
+`
 
-export default Main;
+export default Main

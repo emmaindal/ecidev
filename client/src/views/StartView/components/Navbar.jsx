@@ -1,9 +1,16 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
+import Menu from '@material-ui/icons/Menu'
 
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from '@material-ui/core'
 
-const Navbar = ({ handleSayHello }) => (
+const Navbar = ({
+  isMobile,
+  myWorkisVisible,
+  handleShowMyWork,
+  handleOpenMenu,
+  handleSayHello
+}) => (
   <Nav position="sticky">
     <Toolbar>
       <LogoContainer>
@@ -11,12 +18,24 @@ const Navbar = ({ handleSayHello }) => (
           <Text>EciDev</Text>
         </Logo>
       </LogoContainer>
-      <SayHello onClick={handleSayHello}>Say Hello! :)</SayHello>
+      {!isMobile && (
+        <ButtonContainer>
+          <Button myWorkisVisible={myWorkisVisible} onClick={handleShowMyWork}>
+            {myWorkisVisible ? 'Hide my work' : 'Show my work'}
+          </Button>
+          <Button onClick={handleSayHello}>Say Hello! :)</Button>
+        </ButtonContainer>
+      )}
+      {isMobile && (
+        <MobileNav>
+          <StyledMenu onClick={handleOpenMenu} />
+        </MobileNav>
+      )}
     </Toolbar>
   </Nav>
-);
+)
 
-export default Navbar;
+export default Navbar
 
 const Nav = styled(AppBar)`
   &&& {
@@ -31,16 +50,27 @@ const Nav = styled(AppBar)`
       font-size: 3vw;
     }
   }
-`;
-
-const SayHello = styled.div`
-  background-color: ${props => props.theme.primary};
-  color: ${props => props.theme.textSecondary};
+`
+const ButtonContainer = styled.div`
+  display: flex;
+`
+const Button = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props =>
+    props.myWorkisVisible ? props.theme.secondary : props.theme.primary};
+  color: ${props =>
+    props.myWorkisVisible
+      ? props.theme.textPrimary
+      : props.theme.textSecondary};
   border: 1px solid white;
   border-radius: 10rem;
   box-shadow: 0px 0px 4px ${props => props.theme.primary};
   padding: 2%;
   margin: 2%;
+  width: 150px;
+  height: 30px;
   font-weight: 700;
   letter-spacing: 3px;
   cursor: pointer;
@@ -49,15 +79,16 @@ const SayHello = styled.div`
     background-color: ${props => props.theme.secondary};
     color: ${props => props.theme.textPrimary};
   }
-`;
+`
 
 const LogoContainer = styled.div`
   margin: 1%;
   flex-grow: 1;
-`;
+`
 
 const Logo = styled.div`
   &&& {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,8 +106,13 @@ const Logo = styled.div`
       margin-top: 1rem;
     }
   }
-`;
-
+`
+const StyledMenu = styled(Menu)`
+  &&& {
+    color: white;
+    font-size: 30px;
+  }
+`
 const Text = styled(Typography)`
   &&& {
     color: white;
@@ -85,4 +121,6 @@ const Text = styled(Typography)`
     @media (max-width: 700px) {
     }
   }
-`;
+`
+
+const MobileNav = styled.div``

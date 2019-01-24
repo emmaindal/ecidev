@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import "../../App.css";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import '../../App.css'
+import styled from 'styled-components'
 
 class Header extends Component {
   render() {
     return (
       <Container className="App-header">
         <Effect>
-          <img src="./svg-website.svg" alt="svg pic" />
+          <img src="./svg.svg" alt="svg pic" />
         </Effect>
 
         <Heading>Design - Frontend - Backend</Heading>
@@ -15,7 +15,7 @@ class Header extends Component {
           A creative Informationarchitect with a huge love for Web Development
         </SubHeading>
       </Container>
-    );
+    )
   }
 }
 
@@ -32,7 +32,7 @@ const Container = styled.div`
   @media (max-width: 700px) {
     font-size: 4vw;
   }
-`;
+`
 
 const Effect = styled.div`
   width: 100%;
@@ -40,7 +40,10 @@ const Effect = styled.div`
   top: 0;
   left: 0;
   position: absolute;
-`;
+  @media (max-width: 700px) {
+    min-height: 10vh;
+  }
+`
 
 const Heading = styled.h1`
   &&& {
@@ -52,23 +55,21 @@ const Heading = styled.h1`
     color: ${props => props.theme.textPrimary};
 
     @media (max-width: 700px) {
-      color: ${props => props.theme.textSecondary};
       font-size: 5vw;
     }
   }
-`;
+`
 
 const SubHeading = styled.h5`
   &&& {
     margin: 0;
     z-index: 9999;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: bold;
     @media (max-width: 700px) {
       font-size: 4vw;
-      color: ${props => props.theme.secondaryLight};
     }
   }
-`;
+`
 
-export default Header;
+export default Header
