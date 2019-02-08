@@ -50,6 +50,7 @@ const Container = styled.div`
   background: #fff;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   height: ${props => (props.myWorkisVisible ? '100vh' : '0vh')};
   transition: height 1s;
@@ -73,7 +74,6 @@ const Content = styled.div`
   }
 `
 const Project = styled.div`
-  overflow: hidden;
   font-size: 1vw;
   font-weight: bold;
   border-radius: 5px;
@@ -86,8 +86,7 @@ const Project = styled.div`
   color: ${props => props.theme.textPrimary};
 
   @media (max-width: 700px) {
-    min-height: 300px;
-
+    min-height: 350px;
     max-height: 100%;
     font-size: 4.5vw;
     margin: 0;
@@ -109,10 +108,7 @@ const Link = styled.a`
     ${props => (props.disabled ? 'none' : props.theme.primary)};
   padding: 3%;
   margin: 2%;
-  width: 150px;
-  height: 30px;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-size: 12px;
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
 `
 
