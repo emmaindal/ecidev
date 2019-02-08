@@ -12,6 +12,7 @@ class Main extends Component {
       <Container>
         <Content>
           <Heading>Hi, I'm Emma. Happy to meet you here.</Heading>
+          <Image src="me_2.png" />
           <About>
             I'm an Information Architect student at Malmö University at the
             moment and is about to finish my last year. My heart sings when I
@@ -89,6 +90,12 @@ const About = styled.p`
     font-size: 3.5vw;
     margin-bottom: 10%;
   }
+`
+
+const Image = styled.img`
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px ${props => props.theme.primaryDark};
+  width: 50%;
 `
 
 const Content = styled.div`
