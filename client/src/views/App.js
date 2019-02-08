@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import ReactGA from "react-ga";
-import "./App.css";
+import React, { Component } from 'react'
+import ReactGA from 'react-ga'
+import './App.css'
 
-import StartViewContainer from "./StartView/StartViewContainer";
+import StartViewContainer from './StartView/StartViewContainer'
 
-import theme from "../styles/theme";
-import { ThemeProvider, injectGlobal } from "styled-components";
+import theme from '../styles/theme'
+import { ThemeProvider, injectGlobal } from 'styled-components'
 
 injectGlobal`
   @font-face {
@@ -17,10 +17,10 @@ injectGlobal`
 	padding:0;
 
 	}
-`;
+`
 
-ReactGA.initialize("UA-128955864-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize('UA-128955864-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 class App extends Component {
   render() {
@@ -30,8 +30,8 @@ class App extends Component {
           <StartViewContainer />
         </div>
       </ThemeProvider>
-    );
+    )
   }
 }
 
-export default App;
+export default App

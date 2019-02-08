@@ -1,10 +1,10 @@
 const theme = {
-  primary: '#EEB2BE',
-  secondary: '#efebe8',
-  primaryLight: '#C4A29E',
-  secondaryLight: '#efebe8',
-  primaryDark: '#C4A29E',
-  secondaryDark: '#EEB2BE',
+  primary: '#E055B4',
+  secondary: '#FFDB8C',
+  primaryLight: '#EEA2D6',
+  secondaryLight: '#FFDB8C',
+  primaryDark: '#CC4EA4',
+  secondaryDark: '#BA9B54',
 
   borderPrimary: 'white',
   borderSecondary: 'rgba(54, 49, 45, 0.85)',
@@ -13,7 +13,7 @@ const theme = {
   textSecondary: '#fff',
 
   shadowPrimary: 'rgb(54, 47, 50)',
-  shadowSecondary: 'rgb(199, 168, 181)'
+  shadowSecondary: '#afaeaf'
 }
 
 export default theme

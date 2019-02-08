@@ -84,7 +84,9 @@ const About = styled.p`
 
   font-weight: bold;
   @media (max-width: 700px) {
-    font-size: 4vw;
+    color: #f0f0f0;
+    font-weight: 200;
+    font-size: 3.5vw;
     margin-bottom: 10%;
   }
 `

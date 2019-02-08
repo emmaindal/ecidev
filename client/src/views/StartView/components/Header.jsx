@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <Container className="App-header">
         <Effect>
-          <img src="./svg.svg" alt="svg pic" />
+          <img src="./svg_3.svg" alt="svg pic" />
         </Effect>
 
         <Heading>Design - Frontend - Backend</Heading>
@@ -56,6 +56,7 @@ const Heading = styled.h1`
 
     @media (max-width: 700px) {
       font-size: 5vw;
+      color: ${props => props.theme.textSecondary};
     }
   }
 `
@@ -68,6 +69,7 @@ const SubHeading = styled.h5`
     font-weight: bold;
     @media (max-width: 700px) {
       font-size: 4vw;
+      color: #605e60;
     }
   }
 `

@@ -68,8 +68,8 @@ const Button = styled.div`
     props.myWorkisVisible
       ? props.theme.textPrimary
       : props.theme.textSecondary};
-  border: 1px solid white;
-  border-radius: 10rem;
+  border: 1px solid ${props => props.theme.primary};
+  border-radius: 2rem;
   box-shadow: 0px 0px 4px ${props => props.theme.primary};
   padding: 2%;
   margin: 2%;

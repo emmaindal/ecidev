@@ -14,9 +14,7 @@ class MyWork extends Component {
               A application aimed to show resturants in a specific city
               depending on your chosen allergy
             </Description>
-            <Link href="https://www.allergikartan.se/" target="_blank">
-              To the website
-            </Link>
+            <Link disabled={true}>To the website</Link>
           </Project>
           <Project>
             <Image src="/test3.png" />
@@ -102,11 +100,20 @@ const Description = styled.p`
   margin-bottom: 10%;
 `
 const Link = styled.a`
-  color: ${props => props.theme.textPrimary};
   text-decoration: none;
-  background: ${props => props.theme.primaryDark};
-  color: #fff;
-  padding: 2%;
+  background: ${props =>
+    props.disabled ? 'lightgrey' : props.theme.primaryDark};
+  color: ${props => (props.disabled ? '#b2b2b2' : '#fff')};
+  border-radius: 2rem;
+  box-shadow: 0px 0px 4px
+    ${props => (props.disabled ? 'none' : props.theme.primary)};
+  padding: 3%;
+  margin: 2%;
+  width: 150px;
+  height: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
 `
 
 const Image = styled.img`
