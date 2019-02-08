@@ -62,7 +62,7 @@ const Cards = styled.div`
   align-items: center;
   background: rgba(255, 255, 255, 0);
   width: 100%;
-  height: 90%;
+  height: 60%;
 
   @media (max-width: 700px) {
     display: flex;
