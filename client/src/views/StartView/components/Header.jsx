@@ -10,9 +10,10 @@ class Header extends Component {
           <img src="./svg_3.svg" alt="svg pic" />
         </Effect>
 
-        <Heading>Design - Frontend - Backend</Heading>
+        <Heading>Designer and Developer </Heading>
         <SubHeading>
-          A creative Informationarchitect with a huge love for Web Development
+          A creative Informationarchitect with a great passion for Web
+          Development
         </SubHeading>
       </Container>
     )

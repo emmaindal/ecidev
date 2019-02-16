@@ -18,7 +18,8 @@ class Main extends Component {
             moment and is about to finish my last year. My heart sings when I
             get the opportunity to be in the whole working process in a project
             and I love everything from writing backend code, frontend code to
-            designing mockups. But I prefer wrinting clean code in JavaScript!
+            understand the user behavior, design user flows and user interfaces.
+            But I prefer wrinting clean code in JavaScript!
           </About>
           <Cards>
             <Card

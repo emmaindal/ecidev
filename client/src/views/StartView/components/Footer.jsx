@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Footer = ({ handleSayHello }) => (
   <Container position="sticky">
-    <Text>Made by me © EciDev 2019</Text>
+    <Text>Made with love © EciDev 2019 | hello@ecidev.site</Text>
   </Container>
 )
 
