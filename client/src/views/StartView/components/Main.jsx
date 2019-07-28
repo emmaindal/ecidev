@@ -16,9 +16,8 @@ class Main extends Component {
             did i choose to work with only one part? the answer is no. i love to
             be included in the entire project and switch between working with
             user experience, frontend development, backend development, data
-            visualisation and create a complex database query as much as I can.
-            i am also very interesting in team collaboration and humans mental
-            health.
+            visualisation and create complex database queries as much as I can.
+            i am also very interested in team collaboration and mental health.
             <br />
             <br />i love modern technology and work most of the time with
             javascript, react, node and graphql.
