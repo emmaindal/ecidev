@@ -3,43 +3,35 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Card from './Card'
 
-import CardContent from '../content/CardContent'
+import content from '../content/CardContent'
 
 class Main extends Component {
   render() {
-    const { first, second, third } = CardContent
     return (
       <Container>
         <Content>
-          <Heading>Hi, I'm Emma. Happy to meet you here.</Heading>
+          <Heading>hi, i'm emma. happy to meet you here.</Heading>
           <Image src="me_2.png" />
           <About>
-            I'm an Information Architect student at Malmö University at the
-            moment and is about to finish my last year. My heart sings when I
-            get the opportunity to be in the whole working process in a project
-            and I love everything from writing backend code, frontend code to
-            understand the user behavior, design user flows and user interfaces.
-            But I prefer wrinting clean code in JavaScript!
+            did i choose to work with only one part? the answer is no. i love to
+            be included in the entire project and switch between working with
+            user experience, frontend development, backend development, data
+            visualisation and create a complex database query as much as I can.
+            i am also very interesting in team collaboration and humans mental
+            health.
+            <br />
+            <br />i love modern technology and work most of the time with
+            javascript, react, node and graphql.
           </About>
           <Cards>
-            <Card
-              title={first.title}
-              content={first.content}
-              heading3={first.heading3}
-              listitems={first.listitems}
-            />
-            <Card
-              title={second.title}
-              content={second.content}
-              heading3={second.heading3}
-              listitems={second.listitems}
-            />
-            <Card
-              title={third.title}
-              content={third.content}
-              heading3={third.heading3}
-              listitems={third.listitems}
-            />
+            {content.map(section => (
+              <Card
+                title={section.title}
+                content={section.content}
+                heading3={section.heading3}
+                listitems={section.listitems}
+              />
+            ))}
           </Cards>
         </Content>
       </Container>
@@ -94,9 +86,9 @@ const About = styled.p`
 `
 
 const Image = styled.img`
-  border-radius: 100%;
+  border-radius: 50%;
   box-shadow: 0px 0px 20px ${props => props.theme.primaryDark};
-  width: 50%;
+  width: 40%;
 `
 
 const Content = styled.div`

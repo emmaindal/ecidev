@@ -15,15 +15,15 @@ const Navbar = ({
     <Toolbar>
       <LogoContainer>
         <Logo>
-          <Text>EciDev</Text>
+          <Text>ecidev</Text>
         </Logo>
       </LogoContainer>
       {!isMobile && (
         <ButtonContainer>
           <Button myWorkisVisible={myWorkisVisible} onClick={handleShowMyWork}>
-            {myWorkisVisible ? 'Hide my work' : 'Show my work'}
+            {myWorkisVisible ? 'hide my work' : 'show my work'}
           </Button>
-          <Button onClick={handleSayHello}>Say Hello! :)</Button>
+          <Button onClick={handleSayHello}>say hello! :)</Button>
         </ButtonContainer>
       )}
       {isMobile && (

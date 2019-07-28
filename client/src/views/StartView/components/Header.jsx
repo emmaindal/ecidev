@@ -10,10 +10,10 @@ class Header extends Component {
           <img src="./svg_3.svg" alt="svg pic" />
         </Effect>
 
-        <Heading>Designer and Developer </Heading>
+        <Heading>developer, designer and daydreamer</Heading>
         <SubHeading>
-          A creative Informationarchitect with a great passion for Web
-          Development
+          a creative informationarchitect with a great passion for web
+          development
         </SubHeading>
       </Container>
     )
@@ -52,7 +52,6 @@ const Heading = styled.h1`
     z-index: 9999;
     letter-spacing: 5px;
     font-weight: bold;
-    text-transform: uppercase;
     color: ${props => props.theme.textPrimary};
 
     @media (max-width: 700px) {

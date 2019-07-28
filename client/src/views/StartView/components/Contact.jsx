@@ -49,10 +49,10 @@ class Contact extends Component {
     return (
       <Container>
         <Content>
-          <Heading>I love coffee. Do you?</Heading>
+          <Heading>i love coffee. do you?</Heading>
           <Text>
-            Do you have a fantastic idea or just want to swap some words over a
-            coffee. Do not hesitate to get in touch with me.
+            do you have a fantastic idea or just want to swap some words over a
+            coffee. do not hesitate to get in touch with me.
           </Text>
           <Spring from={{ height: 50 }} to={{ heigt: 80 }}>
             {props => (
@@ -80,7 +80,7 @@ class Contact extends Component {
               <Columns>
                 <Column half>
                   <Label special htmlFor="name">
-                    NAME*
+                    name*
                   </Label>
                   <Input
                     onChange={this.handleInputChange}
@@ -93,7 +93,7 @@ class Contact extends Component {
                 </Column>
                 <Column half>
                   <Label special htmlFor="email">
-                    EMAIL*
+                    email*
                   </Label>
                   <Input
                     onChange={this.handleInputChange}
@@ -106,7 +106,7 @@ class Contact extends Component {
                 </Column>
               </Columns>
               <Column>
-                <Label htmlFor="message">MESSAGE</Label>
+                <Label htmlFor="message">message</Label>
                 <Message
                   onChange={this.handleInputChange}
                   type="textarea"
@@ -117,10 +117,10 @@ class Contact extends Component {
               </Column>
               {this.state.isSent ? (
                 <Feedback>
-                  Thank's for your message, I'll respond in 48h
+                  thank's for your message, i'll respond in 48h
                 </Feedback>
               ) : (
-                <Button type="submit">Send</Button>
+                <Button type="submit">send</Button>
               )}
             </ContactForm>
           </FormContainer>

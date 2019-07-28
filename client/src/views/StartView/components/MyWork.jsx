@@ -9,33 +9,33 @@ class MyWork extends Component {
         <Content>
           <Project>
             <Image src="/test2.png" />
-            <ProjectName>Allergikartan</ProjectName>
+            <ProjectName>allergikartan</ProjectName>
             <Description>
-              A application aimed to show resturants in a specific city
+              a application aimed to show resturants in a specific city
               depending on your chosen allergy
             </Description>
-            <Link disabled={true}>To the website</Link>
+            <Link disabled={true}>to the website</Link>
           </Project>
           <Project>
             <Image src="/test3.png" />
-            <ProjectName>PHD Summer School</ProjectName>
+            <ProjectName>phd summer school</ProjectName>
             <Description>
-              A website for all information regaring a PHD summer school on
-              Malmö University.
+              a website for all information regaring a phd summer school on
+              malmö university.
             </Description>
             <Link href="https://www.biomembranes.se/about/" target="_blank">
-              To the website
+              to the website
             </Link>
           </Project>
           <Project>
             <Image src="/test4.png" />
-            <ProjectName>EciDev</ProjectName>
+            <ProjectName>ecidev</ProjectName>
             <Description>
-              My own freelancing website where all my work, contact information
+              my own freelancing website where all my work, contact information
               and other important stuff will be published.
             </Description>
             <Link href="https://www.ecidev.site/" target="_blank">
-              To the website
+              to the website
             </Link>
           </Project>
         </Content>
