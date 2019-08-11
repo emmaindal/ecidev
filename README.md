@@ -1,2 +1,2 @@
 # eciDev
-My own freelancing website.
+My own project website and portfolio.
